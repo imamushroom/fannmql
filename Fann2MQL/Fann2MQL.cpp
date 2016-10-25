@@ -186,6 +186,20 @@ FANN2MQL_API int __stdcall f2M_randomize_weights(int ann, double min_weight, dou
 	return 0;
 }
 
+/* Set the weights.
+* Returns:
+*  0
+*/
+FANN2MQL_API int __stdcall f2M_set_weight(int ann, unsigned int from_neuron, unsigned int to_neuron, double weight)
+{
+	/* this network is not allocated */
+	if (ann<0 || ann>_ann || _fanns[ann] == NULL) return (-1);
+
+	fann_set_weight(_fanns[ann], from_neuron, to_neuron, weight);
+
+	return 0;
+}
+
 /* Returns the number of ann inputs
  *  ann - network handler returned by f2M_create*
  */

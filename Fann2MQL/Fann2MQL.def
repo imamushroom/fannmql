@@ -7,6 +7,7 @@ f2M_destroy_all_anns
 f2M_run
 f2M_get_output
 f2M_randomize_weights
+f2M_set_weight
 f2M_get_num_input
 f2M_get_num_output
 f2M_train

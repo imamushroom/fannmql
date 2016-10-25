@@ -65,6 +65,7 @@ FANN2MQL_API int __stdcall f2M_destroy_all_anns();
 FANN2MQL_API int __stdcall f2M_run(int ann, double *input_vector);
 FANN2MQL_API double __stdcall f2M_get_output(int ann, int output);
 FANN2MQL_API int __stdcall f2M_randomize_weights(int ann, double min_weight, double max_weight);
+FANN2MQL_API int __stdcall f2M_set_weight(int ann, unsigned int from_neuron, unsigned int to_neuron, double weight);
 /* Parameters */
 FANN2MQL_API int __stdcall f2M_get_num_input(int ann);
 FANN2MQL_API int __stdcall f2M_get_num_output(int ann);
